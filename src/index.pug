@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Pomodoro
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+		link(rel="stylesheet" href="./style.css")
+
+	body
+		#app
+			.container.container-left
+				header#title {{ title }}
+				.timer
+					.oval
+						img(src="src/img/pomodoro-red-border.svg")
+						.timer-time {{ minutes }} : {{ seconds }}
+					.buttons
+						button.button-end
+							i.fa-lg.fas.fa-times
+						button.button-start(v-if="!timer", @click="startTimer")
+							i.fa-2x.fas.fa-play
+						button.button-pause(v-if="timer", @click="pauseTimer")
+							i.fa-2x.fas.fa-pause
+						button.button-restart(@click="resetTimer")
+							i.fa-lg.fas.fa-redo
+
+			.container.container-right
+				.todo-info
+					.date-info
+						.today-date {{ year }}-{{ month }}-{{ date }} {{ weekday }}
+						.today-time {{ hour }}:{{ minute }}
+					.task {{ taskName }}
+					.task-state
+						.tomato-num
+						button {{ done }}
+			.navbar
+				a.pomodoro
+					i.fa-lg.far.fa-clock
+				a.todo-edit
+					i.fa-lg.fas.fa-bars
+				a.timer-setting
+					i.fa-lg.fas.fa-spinner
+				a.audio
+					i.fa-lg.fas.fa-music
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js")
+		script(src="./script.js")

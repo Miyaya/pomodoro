@@ -1,0 +1,150 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #093830;
+  font-family: "Noto Sans TC";
+}
+
+.container {
+  background-color: #E7E4DB;
+  height: 800px;
+  width: 50%;
+}
+
+.container-left {
+  float: left;
+}
+
+.container-right {
+  float: right;
+}
+
+header {
+  height: 76px;
+  font-size: 20px;
+  padding: 24px;
+  font-weight: 600;
+}
+
+.timer {
+  text-align: center;
+}
+.timer .oval {
+  position: relative;
+  border-radius: 100%;
+  height: 352px;
+  width: 352px;
+  background-color: #FFE8E4;
+  margin: auto;
+}
+
+img {
+  position: absolute;
+  top: 3.5%;
+  left: 3.5%;
+}
+
+.timer .timer-time {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  line-height: 352px;
+  font-size: 28px;
+  color: #DA5237;
+  z-index: 999;
+  margin-left: -42px;
+}
+
+.buttons {
+  display: table;
+  margin: 10px auto;
+}
+.buttons button {
+  border-radius: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 44px;
+  width: 44px;
+  border: 2px #093830 solid;
+  background-color: transparent;
+}
+.buttons button.button-start, .buttons button.button-pause {
+  height: 56px;
+  width: 56px;
+  background-color: #093830;
+  margin: 0 34px;
+}
+.buttons button.button-start i, .buttons button.button-pause i {
+  color: #E7E4DB;
+  border: 1px solid #093830;
+}
+.buttons button.button-start i.fa-play, .buttons button.button-pause i.fa-play {
+  margin-left: 4px;
+}
+
+.todo-info {
+  width: 80%;
+  font-weight: 300;
+}
+
+.date-info, .task-state {
+  font-size: 20px;
+  display: inline;
+}
+.date-info .today-date, .date-info .today-time, .task-state .today-date, .task-state .today-time {
+  margin-top: -30px;
+}
+.date-info button, .task-state button {
+  color: #1D7C5C;
+  background-color: transparent;
+  border: none;
+  float: right;
+  font-size: 20px;
+}
+
+.today-date {
+  float: left;
+}
+
+.today-time {
+  float: right;
+}
+
+.task {
+  font-size: 24px;
+  margin-top: 250px;
+  padding: 40px 0;
+  border-style: solid;
+  border-color: #12515B;
+  border-width: 1.4px 0px;
+}
+
+.navbar {
+  border: 1px solid #093830;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.navbar a {
+  border: 1px solid #093830;
+  height: 60px;
+  display: table;
+  width: 100%;
+  text-decoration: none;
+}
+.navbar a i {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.navbar a:active {
+  background-color: #095D4F;
+}
+
+.navbar a:active i {
+  color: white;
+}

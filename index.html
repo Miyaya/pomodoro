@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pomodoro</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="container container-left">
+                <header id="title">{{ title }}</header>
+                <div class="timer">
+                    <div class="oval">
+                        <img src="src/img/pomodoro-red-border.svg" />
+                        <div class="timer-time">{{ minutes }} : {{ seconds }}</div>
+                    </div>
+                    <div class="buttons"><button class="button-end"><i class="fa-lg fas fa-times"></i></button><button
+                            class="button-start" v-if="!timer" @click="startTimer"><i
+                                class="fa-2x fas fa-play"></i></button><button class="button-pause" v-if="timer"
+                            @click="pauseTimer"><i class="fa-2x fas fa-pause"></i></button><button
+                            class="button-restart" @click="resetTimer"><i class="fa-lg fas fa-redo"></i></button></div>
+                </div>
+            </div>
+            <div class="container container-right">
+                <div class="todo-info">
+                    <div class="date-info">
+                        <div class="today-date">{{ year }}-{{ month }}-{{ date }} {{ weekday }}</div>
+                        <div class="today-time">{{ hour }}:{{ minute }}</div>
+                    </div>
+                    <div class="task">{{ taskName }}</div>
+                    <div class="task-state">
+                        <div class="tomato-num"></div><button>{{ done }}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar"><a class="pomodoro" href="."><i class="fa-lg far fa-clock"></i></a><a class="todo-edit"
+                    href="/todo-edit.html"><i class="fa-lg fas fa-bars"></i></a><a class="timer-setting"
+                    href=".timer-setting.html"><i class="fa-lg fas fa-spinner"></i></a><a class="audio"
+                    href="/audio.html"><i class="fa-lg fas fa-music"></i></a>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+        <script src="./script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,135 @@
+$pink: #FFE8E4
+$green-light: #E7E4DB
+$green-dark: #093830
+$orange: #DA5237
+$green-divider: #12515B
+$green-button: #1D7C5C
+$green-nav: #095D4F
+$clock-size: 352px
+$navbar-size: 60px
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
+
+*
+	// border: 1px black solid
+	// box-sizing: border-box
+	margin: 0
+	padding: 0
+	color: $green-dark
+	font-family: "Noto Sans TC"
+
+.container
+	background-color: $green-light
+	height: 800px
+	width: 50%
+
+.container-left
+	float: left
+.container-right
+	float: right
+
+header
+	height: 76px
+	font-size: 20px
+	padding: 24px
+	font-weight: 600
+
+.timer
+	position: relative
+	text-align: center
+
+	.oval
+		border-radius: 100%
+		height: $clock-size
+		width: $clock-size
+		background-color: $pink
+		margin: auto
+
+	.timer-time
+		position: absolute
+		top: 0
+		left: 50%
+		line-height: 352px
+		font-size: 28px
+		color: #DA5237
+		z-index: 999
+		margin-left: -42px
+
+img
+	position: absolute
+	top: 3.5%
+	left: 3.5%
+.buttons
+	display: table
+	margin: 10px auto
+	button
+		border-radius: 100%
+		display: table-cell
+		vertical-align: middle
+		height: 44px
+		width: 44px
+		border: 2px $green-dark solid
+		background-color: transparent
+
+	button.button-start, button.button-pause
+		height: 56px
+		width: 56px
+		background-color: $green-dark
+		margin: 0 34px
+		i
+			color: $green-light
+			border: 1px solid $green-dark
+		i.fa-play
+			margin-left: 4px
+
+.todo-info
+	width: 80%
+	font-weight: 300
+	// margin: auto
+
+.date-info, .task-state
+	font-size: 20px
+	display: inline
+	.today-date, .today-time
+		margin-top: -30px
+	button
+		color: $green-button
+		background-color: transparent
+		border: none
+		float: right
+		font-size: 20px
+
+.today-date
+	float: left
+.today-time
+	float: right
+
+.task
+	font-size: 24px
+	margin-top: 250px
+	padding: 40px 0
+	border-style: solid
+	border-color: $green-divider
+	border-width: 1.4px 0px
+
+.navbar
+	border: 1px solid $green-dark
+	width: $navbar-size
+	height: 100%
+	position: absolute
+	right: 0
+	top: 0
+	a
+		border: 1px solid $green-dark
+		height: $navbar-size
+		display: table
+		width: 100%
+		text-decoration: none
+		i
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+	a:active
+		background-color: $green-nav
+		i
+			color: white
